@@ -4,11 +4,12 @@ kind: Kustomization
 bases:
   - ../../base
 images:
-  - name: bretfisher/wordsmith-api
-    newTag: latest
-  - name: bretfisher/wordsmith-web
-    newTag: latest
-configMapGenerator:
+  - name: warcraft2/wordsmith-api
+    newName: ghcr.io/warcraft2/wordsmith-api
+    newTag: stable-20230717-6bc2d7b
+  - name: warcraft2/wordsmith-web
+    newName: ghcr.io/warcraft2/wordsmith-web
+    newTag: stable-20230717-de7fbdf
   - name: db-schema
     files:
       - words.sql
